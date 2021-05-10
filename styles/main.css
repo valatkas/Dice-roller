@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #301934;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2em 7em;
+  border-radius: 5px;
+  background-color: white;
+  max-width: 30%;
+}
+
+.main-inputs,
+.secondary-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.main-inputs {
+  margin-bottom: 2em;
+}
+
+.main-inputs .input:first-child {
+  margin-right: 2em;
+}
+
+.profit-value,
+.bet-value {
+  padding: 0.5em 0em;
+  text-align: center;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #a9a9a9;
+  width: 94%;
+  border-radius: 5px;
+}
+
+.input-value {
+  padding: 0.5em 0.2em;
+  text-align: center;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #a9a9a9;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.profit-value {
+  background-color: #a9a9a9;
+}
+
+.input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.bet-amount {
+  color: #505050;
+  font-size: 16px;
+}
+
+.roll-dice-button {
+  background-color: #301934;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  border-style: none;
+  margin-top: 3em;
+  padding: 1.5em 9em;
+  transition: 0.5s;
+}
+
+.roll-dice-button:hover {
+  background-color: #5a3061;
+}
+
+.roll-dice-button-clicked {
+  background-color: #f44336;
+  padding: 1.5em 0.3em;
+  transition: 0.5s;
+  animation: 2s linear buttonroll;
+}
+
+@keyframes buttonroll {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(50deg);
+  }
+}
+
+.percentage-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87688d;
+  margin-top: 4em;
+  border-radius: 30px;
+  max-width: 100%;
+  padding: 0.6em 2em;
+  color: white;
+  font-weight: 600;
+}
+
+.range {
+  width: 500px;
+  height: auto;
+  cursor: pointer;
+}
+
+.min-range {
+  margin-right: 1em;
+}
+
+.max-range {
+  margin-left: 1em;
+}
+
+.fa-percentage,
+.fa-times {
+  margin: 1em 0.7em 0 0.7em;
+  font-size: 20px;
+  color: #505050;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #a9a9a9;
+  padding: 0.55em 0.2em;
+  border-radius: 5px;
+}
+
+.dice {
+  margin-top: 1.9em;
+  width: 70px;
+  height: auto;
+  clear: both;
+  animation: diceroll 2s;
+}
+
+@keyframes diceroll {
+  from {
+    transform: rotate(50deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dice-div {
+  display: none;
+}
+
+.alert {
+  padding: 1em 5em;
+  margin-bottom: 3em;
+  border-radius: 5px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  display: none;
+}
+
+.balance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #87688d;
+  margin-bottom: 4em;
+  border-radius: 30px;
+  max-width: 100%;
+  padding: 0.6em 2em;
+  color: white;
+  font-weight: 600;
+}
+
+.bets {
+  color: white;
+  background-color: #87688d;
+  vertical-align: top;
+  border-radius: 5px;
+  height: 400px;
+  width: 200px;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 2em;
+}
+
+.bets-text {
+  display: block;
+  margin: 0.3em 0 0 0.1em;
+  animation: 0.5s textAppear;
+}
+
+@keyframes textAppear {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.probability {
+  color: white;
+  position: absolute;
+  bottom: 140px;
+  background-color: #87688d;
+  vertical-align: top;
+  border-radius: 5px;
+  padding: 1em;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.stats {
+  color: white;
+  background-color: #87688d;
+  vertical-align: top;
+  border-radius: 5px;
+  height: 400px;
+  width: 200px;
+  text-align: left;
+  font-size: 16px;
+  margin-left: 2em;
+}
+
+.stats-text {
+  text-align: center;
+  display: block;
+  margin: 1em 0 0.5em 0.3em;
+}
+
+.seed-btn {
+  background-color: #301934;
+  margin: 0.3em 3.5em 0.1em 3.5em;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  border-style: none;
+  margin-top: 3em;
+  padding: 1em;
+  transition: 0.5s;
+}
+
+.seed-btn:hover {
+  background-color: #5a3061;
+}

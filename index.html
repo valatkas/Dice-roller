@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roll the dice</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script type="module" src="./src/app.js"></script>
+    <script type="module" src="./src/betCalculator.js"></script>
+  </head>
+  <body>
+    <div id="alert" class="alert"></div>
+    <div id="balance" class="balance"></div>
+    <div class="main-container">
+      <div id="stats" class="stats">
+        <span id="total-profit" class="stats-text">Total profit: 0</span>
+        <span id="total-spent" class="stats-text">Total spent: 0</span>
+        <span id="win-count" class="stats-text">Win count: 0</span>
+        <span id="loss-count" class="stats-text">Loss count: 0</span>
+        <span id="win-ratio" class="stats-text">Win ratio: 0</span>
+        <input
+          id="show-server-seed"
+          class="seed-btn"
+          type="button"
+          value="View server seed"
+        />
+        <input
+          id="show-client-seed"
+          class="seed-btn"
+          type="button"
+          value="View client seed"
+        />
+      </div>
+
+      <div class="main-div">
+        <div class="main-inputs">
+          <div class="input">
+            <span class="bet-amount">Bet amount</span>
+            <input
+              id="bet-amount"
+              type="number"
+              class="bet-value"
+              value="0.00"
+            />
+          </div>
+
+          <div class="input">
+            <span class="bet-amount">Profit on win</span>
+            <input
+              id="profit-amount"
+              type="number"
+              disabled="disabled"
+              class="profit-value"
+              value="0.00"
+            />
+          </div>
+        </div>
+
+        <div class="secondary-inputs">
+          <div class="input">
+            <span class="bet-amount">Multiplier</span>
+            <input
+              id="multiplier-amount"
+              type="number"
+              step="0.01"
+              class="input-value"
+              value="2.00"
+            />
+          </div>
+          <i class="fas fa-times"></i>
+
+          <div class="input">
+            <span class="bet-amount">Roll-over</span>
+            <input
+              id="roll-over-amount"
+              type="text"
+              disabled="disabled"
+              class="input-value"
+              value="50.00"
+            />
+          </div>
+          <i class="fas fa-percentage"></i>
+
+          <div class="input">
+            <span class="bet-amount">Win chance</span>
+            <input
+              id="win-chance-amount"
+              type="number"
+              class="input-value"
+              disabled="disabled"
+              value="50.00"
+            />
+          </div>
+
+          <i class="fas fa-percentage"></i>
+        </div>
+
+        <input
+          id="roll-dice-button"
+          type="button"
+          class="roll-dice-button"
+          value="ROLL DICE"
+        />
+
+        <div id="dice-div" class="dice-div">
+          <img class="dice" src="./img/dice.svg" />
+        </div>
+      </div>
+      <div id="bets" class="bets"></div>
+    </div>
+
+    <div class="percentage-bar">
+      <span class="min-range">0</span>
+      <input
+        id="percentage-range"
+        type="range"
+        min="1"
+        max="99"
+        class="range"
+      />
+      <span class="max-range">100</span>
+    </div>
+  </body>
+</html>

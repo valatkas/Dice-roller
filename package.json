@@ -1,0 +1,6 @@
+{
+  "name": "dice",
+  "dependencies": {
+    "mkdirp": "^1.0.4"
+  }
+}
