@@ -17,4 +17,4 @@ Final hash is converted and stored as probability once the dice is rolled.
   <img width="700" height="auto" src="https://a.pomf.cat/xiksho.jpg">
 </p>
 <br />
-Repository can be viewed at: https://valatkas.github.io/Dice-roller/
+Project can be accesed at: https://valatkas.github.io/Dice-roller/
